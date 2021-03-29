@@ -1,7 +1,6 @@
 'use strict'
 
 const express = require('express');
-const bodyParser =  require('body-parser');
 const mongoose = require('mongoose');
 
 // Connecta ao banco
@@ -9,7 +8,7 @@ mongoose.connect('mongodb+srv://sabanai:sabanai@cluster0.wfblr.mongodb.net/myFir
 
 
 const app = express();
-const router = express.Router();
+express.Router();
 
 // Carrega os Models
 const Product = require('./models/product');
