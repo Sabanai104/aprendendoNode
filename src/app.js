@@ -2,9 +2,9 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
-
+const config = require('./config');
 // Connecta ao banco
-mongoose.connect('mongodb+srv://sabanai:sabanai@cluster0.wfblr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser:true, useUnifiedTopology: true });
+mongoose.connect(config.connectionString, { useNewUrlParser:true, useUnifiedTopology: true });
 
 
 const app = express();
